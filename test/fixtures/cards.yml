@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: Do some thing one
+  status: backlog
+  board: one
+
+two:
+  title: Do something two
+  status: backlog
+  board: two

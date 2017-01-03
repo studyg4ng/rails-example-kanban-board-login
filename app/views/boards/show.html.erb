@@ -1,0 +1,39 @@
+<h1><%= @board %></h1>
+
+
+<div class="row">
+  <% Card.valid_status.each do |status| %>
+  <div class="col-sm-3 text-white <%= status_color(status) %>">
+      <h2 class=""><%= status %></h2>
+  </div>
+  <% end %>
+</div>
+
+
+<div class="row">
+  <% Card.valid_status.each do |status| %>
+  <div class="col-sm-3 <%= status_color(status) %>">
+
+  <% @board.cards.select{|c| c.status == status}.each do |card| %>
+    <div class="card card-block">
+      <h4 class="card-title"><%= card.title %></h4>
+      <p class="card-text"><%= card.description %></p>
+      <%= render 'button_to_prev_status', card: card %>
+      <%= link_to 'Edit', edit_card_path(card), { class: "btn btn-primary" } %>
+      <%= render 'button_to_next_status', card: card %>
+
+    </div>
+  <% end %>
+
+    <% if status == Card.valid_status.first %>
+      <div class="card card-block">
+        <h4 class="card-title">New Card</h4>
+        <%= link_to 'Create', new_board_card_path(@board), { class: "btn btn-primary" } %>
+      </div>
+    <% end %>
+
+  </div>
+  <% end %>
+</div>
+
+

@@ -1,0 +1,22 @@
+<h1>All Boards</h1>
+
+<div class="list-group">
+
+  <% @boards.each do |board| %>
+
+    <li class="list-group-item list-group-item-action">
+      <h5 class="list-group-item-heading">
+        <span class="tag tag-default tag-pill float-xs-right"><%= board.cards.length %></span>
+        <%= link_to board.title, board_path( board )%></h5>
+      <p class="list-group-item-text">Last Modified <%= time_ago_in_words board.last_change %> ago.</p>
+      <p class="list-group-item-text">
+        <%= link_to 'Edit Board Settings', edit_board_path(board) %>, 
+        <%= link_to 'Delete Board', board, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </p>
+    </li>
+  <% end %>
+  <li class="list-group-item list-group-item-action">
+    <h5 class="list-group-item-heading">Add a <%= link_to 'New Board', new_board_path %></h5>
+  </li>
+
+</div>

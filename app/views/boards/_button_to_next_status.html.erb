@@ -1,0 +1,6 @@
+<% unless card.next_status.nil? %>
+    <%= form_for [card.board, card]  do |f| %>
+        <%= hidden_field :card, :status, value: card.next_status %>
+        <%= f.submit raw('&rarr;'), class: "btn btn-secondary btn-sm" %>
+    <% end %>
+<% end %>

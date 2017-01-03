@@ -1,0 +1,30 @@
+<%= form_for([@board, card]) do |f| %>
+  <% if card.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(card.errors.count, "error") %> prohibited this card from being saved:</h2>
+
+      <ul>
+      <% card.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :title %>
+    <%= f.text_field :title, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :description %>
+    <%= f.text_area :description, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :status %>
+    <%= f.select( :status, status_options(card.status), {}, {class: 'form-control'} ) %>
+  </div>
+
+  <%= f.submit 'Save', class: 'btn btn-secondary btn-sm' %>
+<% end %>
