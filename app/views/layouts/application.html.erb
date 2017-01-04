@@ -12,7 +12,7 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+    <nav class="navbar navbar-light mb-1" style="background-color: #e3f2fd;">
       <a class="navbar-brand" href="/">
         <%= image_tag('logo.svg', size: "30x30", alt: "Kanban Boards", class: 'd-inline-block') %>
         Kanban Boards
@@ -47,5 +47,14 @@
 
       <%= yield %>
     </div>
+    <footer class="bd-footer text-muted">
+      <div class="container">
+        <p>This Demo App offers no Login. But a session-cookie <kbd><%=
+        Rails.application.config.session_options[:key] %></kbd> is still created
+          by rails and set for each visitor.</p>
+        <p>You can find the source code in branch
+          <kbd>master</kbd> of <a href="https://github.com/backend-development/rails-example-kanban-board-login">the repository</a>.</p>
+      </div>
+    </footer>
   </body>
 </html>
