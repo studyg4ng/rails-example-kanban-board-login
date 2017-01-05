@@ -13,4 +13,6 @@ See the demo apps to get an overview:
 * [Demo with Omniauth](https://kanban-4.herokuapp.com/) enables login with Google, Facebook and many other providers
 
 
+The example app implements a simple kanban board, and looks like this:
+
 ![Screenshot of the Demo App](https://backend-development.github.io/images/screenshot-kanban.png)
