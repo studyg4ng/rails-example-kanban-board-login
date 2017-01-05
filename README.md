@@ -1,8 +1,14 @@
 # README
 
-This is the second version of the 'Kanban Board' example app.
-This time it's about the login, see
-https://backend-development.github.io/authentication_from_scratch.html
+This is an example app to learn about different ways to implement
+Logins in Rails.  See [Rails Authentication](https://backend-development.github.io/rails_authentication.html)
+in backend-development.github.io.
 
-See te demo apps at https://afternoon-bastion-50547.herokuapp.com/
- 
+This repository contains 4 branches with 4 different implementations.
+See the demo apps to get an overview:
+
+* [No Login](https://kanban-1.herokuapp.com/) the basic app with no login
+* [Basic Authentication](https://kanban-2.herokuapp.com/) using only built in Rails 5 features
+* [Devise](https://kanban-3.herokuapp.com/) gives you password reminders, confirmation, and so on
+* [Omniauth](https://kanban-4.herokuapp.com/) enables login with Google, Facebook and many other providers
+
