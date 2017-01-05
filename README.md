@@ -12,3 +12,5 @@ See the demo apps to get an overview:
 * [Demo with Devise](https://kanban-3.herokuapp.com/) gives you password reminders, confirmation, and so on
 * [Demo with Omniauth](https://kanban-4.herokuapp.com/) enables login with Google, Facebook and many other providers
 
+
+![Screenshot of the Demo App](https://backend-development.github.io/images/screenshot-kanban.png)
