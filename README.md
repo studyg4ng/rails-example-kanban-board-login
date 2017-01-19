@@ -1,5 +1,7 @@
 # README
 
+For the assignment solution, open Assignment_SOLUTION.md
+
 This is an example app to learn about different ways to implement
 Logins in Rails.  See [Rails Authentication](https://backend-development.github.io/rails_authentication.html)
 in backend-development.github.io.
